@@ -28,7 +28,6 @@
                     <li><a href="{{ route('home') }}" class="text-sm font-medium text-slate-300 hover:text-white transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-indigo-400 after:transition-all hover:after:w-full {{ request()->routeIs('home') ? 'text-white after:w-full' : '' }}">Beranda</a></li>
                     <li><a href="{{ route('products') }}" class="text-sm font-medium text-slate-300 hover:text-white transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-indigo-400 after:transition-all hover:after:w-full {{ request()->routeIs('products') ? 'text-white after:w-full' : '' }}">Produk</a></li>
                     <li><a href="{{ route('transaction') }}" class="text-sm font-medium text-slate-300 hover:text-white transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-indigo-400 after:transition-all hover:after:w-full {{ request()->routeIs('transaction') ? 'text-white after:w-full' : '' }}">Top Up</a></li>
-                    <li><a href="{{ route('transaction.history') }}" class="text-sm font-medium text-slate-300 hover:text-white transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-indigo-400 after:transition-all hover:after:w-full {{ request()->routeIs('transaction.history') ? 'text-white after:w-full' : '' }}">Riwayat</a></li>
                     <li><a href="{{ route('help') }}" class="text-sm font-medium text-slate-300 hover:text-white transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-indigo-400 after:transition-all hover:after:w-full">Bantuan</a></li>
                 </ul>
 
@@ -38,9 +37,8 @@
                         <i class="fas fa-shopping-cart text-lg"></i>
                         <span class="absolute top-0 right-0 w-4 h-4 bg-rose-500 text-white text-[10px] font-bold flex items-center justify-center rounded-full animate-bounce">0</span>
                     </a>
-                    <a href="{{ route('profile') }}" class="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 transition-all text-sm font-medium text-white">
-                        <i class="fas fa-user-circle"></i>
-                        <span>Profil</span>
+                    <a href="{{ route('profile') }}" class="flex items-center justify-center gap-2 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 transition-all text-sm font-bold text-white" style="padding: 10px 32px; font-size: 15px;">
+                        <span>Daftar</span>
                     </a>
                 </div>
 

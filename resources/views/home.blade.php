@@ -5,25 +5,25 @@
 @section('content')
 
 <!-- Hero Section -->
-<section class="relative min-h-[600px] flex items-center pt-44 pb-20 overflow-hidden bg-slate-950 -mt-24">
+<section class="relative min-h-[600px] flex items-center pt-44 pb-20 overflow-hidden bg-slate-950" style="margin-top: -16px;">
     <!-- Background image representing a game character -->
     <div class="absolute inset-0 z-0 flex justify-end">
         <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/90 to-transparent z-10 w-full md:w-3/4"></div>
         <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent z-10"></div>
-        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Gaming Character" class="w-full md:w-2/3 h-[110%] object-cover object-top opacity-100 -translate-y-10 md:-translate-y-12"> 
+        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Gaming Character" class="w-full md:w-2/3 h-full object-cover object-center opacity-50" style="border-bottom: 24px solid rgba(2, 6, 23, 0.7); box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.8);"> 
     </div>
 
     <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div class="max-w-2xl">
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight">
-                Trusted by Gamers. Powered by <br>
+            <h1 class="text-4xl md:text-5xl lg:text-5xl font-black text-white mb-6 leading-tight">
+                Trusted by Gamers. Powered by
                 <span class="text-white">Results.</span>
             </h1>
             <p class="text-lg text-slate-300 mb-8 leading-relaxed max-w-xl">
-                L4T helps gamers farm gold to taking out enemies in exciting, heart-pumping games!
+                LanggananKu membantu para gamer mendapatkan item dalam game dengan cepat dan mudah.
             </p>
-            <a href="{{ route('products') }}" class="inline-flex px-8 py-3 rounded-lg bg-yellow-500 hover:bg-yellow-400 text-slate-900 font-bold transition-all duration-300 items-center justify-center">
-                Start Playing Here
+            <a href="{{ route('products') }}" class="inline-flex px-8 py-3 rounded-lg bg-yellow-500 hover:bg-yellow-400 text-slate-900 font-bold transition-all duration-300 items-center justify-center ">
+                Mulai Belanja
             </a>
         </div>
     </div>
@@ -38,32 +38,32 @@
                 <div class="w-12 h-12 mx-auto bg-slate-800 rounded-lg flex items-center justify-center mb-4 text-yellow-500 text-2xl group-hover:scale-110 transition-transform">
                     <i class="fas fa-headset"></i>
                 </div>
-                <h3 class="text-white font-bold mb-2">24/7 Support</h3>
-                <p class="text-slate-400 text-xs leading-relaxed">Our customer care staff is available around the clock to give you entirely free recommendations or assist you in any way.</p>
+                <h3 class="text-white font-bold mb-2">Layanan 24/7</h3>
+                <p class="text-slate-400 text-xs leading-relaxed">Customer care staff kami tersedia sepanjang waktu untuk memberikan rekomendasi gratis atau membantu Anda.</p>
             </div>
             <!-- Badge 2 -->
             <div class="bg-slate-900/95 border border-slate-700/50 p-6 rounded-2xl text-center group shadow-xl">
                 <div class="w-12 h-12 mx-auto bg-slate-800 rounded-lg flex items-center justify-center mb-4 text-yellow-500 text-2xl group-hover:scale-110 transition-transform">
                     <i class="fas fa-dollar-sign"></i>
                 </div>
-                <h3 class="text-white font-bold mb-2">Best Prices</h3>
-                <p class="text-slate-400 text-xs leading-relaxed">We offer the most competitive prices in the market, ensuring you get the best value for your gaming investment.</p>
+                <h3 class="text-white font-bold mb-2">Harga Terbaik</h3>
+                <p class="text-slate-400 text-xs leading-relaxed">Kami menawarkan harga yang paling kompetitif di pasar, memastikan Anda mendapatkan nilai terbaik untuk investasi game Anda.</p>
             </div>
             <!-- Badge 3 -->
             <div class="bg-slate-900/95 border border-slate-700/50 p-6 rounded-2xl text-center group shadow-xl">
                 <div class="w-12 h-12 mx-auto bg-slate-800 rounded-lg flex items-center justify-center mb-4 text-yellow-500 text-2xl group-hover:scale-110 transition-transform">
                     <i class="fas fa-chart-line"></i>
                 </div>
-                <h3 class="text-white font-bold mb-2">Outstanding Boost</h3>
-                <p class="text-slate-400 text-xs leading-relaxed">Our experienced boosters will help you easily achieve your desired rank and progress further.</p>
+                <h3 class="text-white font-bold mb-2">Akun Premium</h3>
+                <p class="text-slate-400 text-xs leading-relaxed">Kami menyediakan berbagai macam akun premium untuk memenuhi kebutuhan gaming Anda.</p>
             </div>
             <!-- Badge 4 -->
             <div class="bg-slate-900/95 border border-slate-700/50 p-6 rounded-2xl text-center group shadow-xl">
                 <div class="w-12 h-12 mx-auto bg-slate-800 rounded-lg flex items-center justify-center mb-4 text-yellow-500 text-2xl group-hover:scale-110 transition-transform">
                     <i class="fas fa-shield-check"></i>
                 </div>
-                <h3 class="text-white font-bold mb-2">Trust and Evidence</h3>
-                <p class="text-slate-400 text-xs leading-relaxed">All trades are secured by our robust system, guaranteeing 100% safety for your accounts and transactions.</p>
+                <h3 class="text-white font-bold mb-2">Terbukti Dan Terpercaya</h3>
+                <p class="text-slate-400 text-xs leading-relaxed">Semua transaksi diamankan oleh sistem kami yang kuat, menjamin keamanan 100% untuk akun dan transaksi Anda.</p>
             </div>
         </div>
     </div>
@@ -73,8 +73,8 @@
 <section class="py-16 bg-slate-950">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-10">
-            <h2 class="text-2xl font-bold text-white mb-2">Earn Money from These Games</h2>
-            <p class="text-slate-400 text-sm italic">we have selective elements, you choose elements and make money for elements.</p>
+            <h2 class="text-2xl font-bold text-white mb-2">Top Up Game</h2>
+            <p class="text-slate-400 text-sm italic">Pilih game favoritmu dan top up dengan mudah dan cepat.</p>
         </div>
 
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4">
@@ -99,8 +99,8 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col sm:flex-row justify-between items-center mb-10 gap-4">
             <div class="text-center sm:text-left">
-                <h2 class="text-2xl font-bold text-white mb-2">Jual Akun Premium & Top Up</h2>
-                <p class="text-slate-400 text-sm italic">we have selective elements, you choose elements and make money for elements.</p>
+                <h2 class="text-2xl font-bold text-white mb-2">Jual Akun Premium</h2>
+                <p class="text-slate-400 text-sm italic">Dapatkan akun favoritmu dengan mudah dan cepat.</p>
             </div>
             <div>
                 <select class="bg-slate-900 text-slate-300 border border-slate-700 rounded-lg px-4 py-2 text-sm outline-none focus:border-yellow-500 transition-colors cursor-pointer">
@@ -136,39 +136,12 @@
     </div>
 </section>
 
-<!-- Gold Sending and Selling Guide -->
-<section class="py-16 bg-slate-950">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-10">
-            <h2 class="text-2xl font-bold text-white mb-2">Gold Sending and Selling Guide</h2>
-            <p class="text-slate-400 text-sm italic">we have selective elements, you choose elements and make money for elements.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <a href="#" class="relative rounded-2xl overflow-hidden group block aspect-[2/1] bg-slate-900 border border-slate-800 hover:border-yellow-500/50 transition-colors shadow-xl">
-                <div class="absolute inset-0 bg-gradient-to-r from-amber-900/60 to-slate-900/80 z-10"></div>
-                <img src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Delivery Guide" class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-60 z-0 group-hover:scale-105 transition-transform duration-500">
-                <div class="absolute inset-0 flex items-end justify-center pb-8 z-20">
-                    <h3 class="text-2xl font-bold text-white tracking-wide">Gold Delivery Guide</h3>
-                </div>
-            </a>
-            <a href="#" class="relative rounded-2xl overflow-hidden group block aspect-[2/1] bg-slate-900 border border-slate-800 hover:border-yellow-500/50 transition-colors shadow-xl">
-                <div class="absolute inset-0 bg-gradient-to-r from-emerald-900/60 to-slate-900/80 z-10"></div>
-                <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="How it works" class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-60 z-0 group-hover:scale-105 transition-transform duration-500">
-                <div class="absolute inset-0 flex items-end justify-center pb-8 z-20">
-                    <h3 class="text-2xl font-bold text-white tracking-wide">How L4T Works</h3>
-                </div>
-            </a>
-        </div>
-    </div>
-</section>
-
 <!-- About Us -->
 <section class="py-20 bg-slate-900/50">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl font-bold text-white mb-6 tracking-wide">About Us</h2>
+        <h2 class="text-3xl font-bold text-white mb-6 tracking-wide">Tentang Kami</h2>
         <p class="text-slate-400 text-sm leading-relaxed mb-16 max-w-4xl mx-auto">
-            Welcome to L4T, the ultimate platform for gamers seeking premium accounts and secure top-ups. With years of experience in the gaming industry, we've established ourselves as a trusted marketplace for players worldwide. Our mission is to provide an accessible, safe, and efficient environment for all your digital gaming needs. Whether you're looking for an account with rare cosmetics, or just need a quick boost in currency, we've got you covered. Join thousands of satisfied customers who have elevated their gaming experience with L4T!
+            Selamat datang di LanggananKu, platform terbaik bagi para gamer yang mencari akun premium dan top-up yang aman. Dengan pengalaman bertahun-tahun di industri game, kami telah memantapkan diri sebagai pasar terpercaya bagi para pemain di seluruh dunia. Misi kami adalah menyediakan lingkungan yang mudah diakses, aman, dan efisien untuk semua kebutuhan digital gaming Anda. Baik Anda mencari akun dengan item langka, atau hanya membutuhkan tambahan mata uang dengan cepat, kami siap membantu Anda. Bergabunglah dengan ribuan pelanggan puas yang telah meningkatkan pengalaman bermain game mereka dengan L4T!
         </p>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-slate-800">
@@ -192,8 +165,8 @@
 <section class="py-20 bg-slate-950">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
-            <h2 class="text-3xl font-bold text-white mb-2">Thousands of gamers trust us, here's why</h2>
-            <p class="text-slate-400 text-sm italic">we have selective elements, you choose elements and make money for elements.</p>
+            <h2 class="text-3xl font-bold text-white mb-2">Ribuan Gamer Percaya Pada Kami, Inilah Alasannya</h2>
+            <p class="text-slate-400 text-sm italic">Kami memiliki elemen-elemen pilihan, Anda memilih elemen dan mendapatkan uang untuk elemen tersebut.</p>
             <div class="flex justify-center gap-2 mt-4 text-slate-600 text-2xl">
                 <i class="fas fa-arrow-circle-left hover:text-yellow-500 cursor-pointer transition-colors"></i>
                 <i class="fas fa-arrow-circle-right hover:text-yellow-500 cursor-pointer transition-colors"></i>
@@ -223,49 +196,6 @@
                 </div>
             </div>
             @endfor
-        </div>
-    </div>
-</section>
-
-<!-- Game News & Guides -->
-<section class="py-20 bg-slate-950">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-            <h2 class="text-2xl font-bold text-white mb-2">Game News & Guides</h2>
-            <p class="text-slate-400 text-sm italic">we have selective elements, you choose elements and make money for elements.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            @php
-                $newsImages = [
-                    'https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=400',
-                    'https://images.unsplash.com/photo-1538481199005-411f5a5c6ec6?q=80&w=400',
-                    'https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=400',
-                    'https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=400'
-                ];
-            @endphp
-            @foreach($newsImages as $img)
-            <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden group shadow-lg hover:border-yellow-500/30 transition-all">
-                <div class="relative aspect-video overflow-hidden">
-                    <img src="{{ $img }}" alt="News Thumbnail" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    <div class="absolute bottom-3 left-1/2 -translate-x-1/2 bg-yellow-500 text-slate-900 text-[10px] uppercase tracking-wider font-bold px-4 py-1.5 rounded-full shadow-lg">2026</div>
-                </div>
-                <div class="p-6">
-                    <h3 class="text-white font-bold mb-3 line-clamp-2 hover:text-yellow-500 transition-colors cursor-pointer text-sm leading-relaxed">Best strategies for winning in your favorite massive multiplayer games</h3>
-                    <p class="text-slate-400 text-xs line-clamp-2 mb-6 leading-relaxed">Learn the advanced mechanics and hidden features to easily dominate the game.</p>
-                    <div class="flex justify-between items-center text-xs text-yellow-500">
-                        <span class="text-slate-500"><i class="far fa-clock"></i> 3 mins read</span>
-                        <a href="#" class="font-bold hover:text-yellow-400 transition-colors">Read More</a>
-                    </div>
-                </div>
-            </div>
-            @endforeach
-        </div>
-
-        <div class="text-center">
-            <a href="#" class="inline-flex px-10 py-3 rounded-lg border border-yellow-500/50 text-yellow-500 hover:bg-yellow-500 hover:text-slate-900 font-bold transition-all duration-300">
-                View More
-            </a>
         </div>
     </div>
 </section>
