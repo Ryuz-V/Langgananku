@@ -173,226 +173,221 @@
 </section>
 
 <!-- News and Update Section -->
-<section class="py-20 bg-slate-950 overflow-hidden relative border-y border-slate-800/50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16 relative">
-            <h2 class="text-3xl md:text-4xl font-black text-white mb-4 tracking-tight">News & <span class="text-yellow-500">Update</span></h2>
-            <p class="text-slate-400 text-sm max-w-2xl mx-auto">Dapatkan informasi terbaru seputar update game, event menarik, dan promo eksklusif hanya di LanggananKu.</p>
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-yellow-500/10 blur-[50px] rounded-full -z-10"></div>
+<section class="py-20 bg-slate-950 relative border-y border-slate-800/50 overflow-hidden">
+    <!-- Decorative background elements -->
+    <div class="absolute top-0 right-0 -translate-y-12 translate-x-1/3 w-96 h-96 bg-yellow-500/10 blur-[100px] rounded-full pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 translate-y-1/3 -translate-x-1/3 w-96 h-96 bg-blue-500/10 blur-[100px] rounded-full pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-12 relative" style="transform: translateX(1.2rem);">
+            <h2 class="text-3xl md:text-5xl font-black text-white mb-4 tracking-tight">Berita & Update</h2>
+            <p class="text-slate-400 text-sm md:text-base leading-relaxed max-w-2xl mx-auto">Jangan lewatkan informasi mendalam mengenai patch notes terbaru, event eksklusif, dan promo menarik yang hanya ada di LanggananKu.</p>
         </div>
 
-        <div class="relative h-[350px] md:h-[450px] w-full max-w-6xl mx-auto flex items-center justify-center">
+        <!-- 3D Carousel Container -->
+        <div class="relative w-full max-w-6xl mx-auto flex items-center justify-center overflow-hidden" style="height: 480px; min-height: 60vh;">
             
-            <!-- Items -->
-            <!-- 1 -->
-            <div class="news-carousel-item absolute top-1/2 w-[85%] sm:w-[50%] md:w-[45%] lg:w-[40%] h-[300px] md:h-[400px] rounded-3xl overflow-hidden shadow-[0_0_30px_rgba(0,0,0,0.5)] transition-all duration-500 cursor-pointer bg-slate-900 border border-slate-700/50" onclick="goToSlide(0)">
-                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="News 1" class="w-full h-full object-cover">
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/60 to-transparent"></div>
-                <div class="absolute bottom-0 left-0 p-6 md:p-8 w-full">
-                    <div class="flex items-center gap-3 mb-3">
-                        <span class="bg-yellow-500 text-slate-900 text-[10px] md:text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Event</span>
-                        <span class="text-slate-300 text-xs">12 Mar 2026</span>
+            <!-- Items Track -->
+            <div id="news-3d-track" class="w-full h-full relative">
+                
+                <!-- Item 1 -->
+                <div class="news-3d-item absolute top-1/2 left-1/2 w-10/12 md:w-5/12 lg:w-4/12 h-80 md:h-96 rounded-3xl overflow-hidden shadow-2xl group cursor-pointer border-2 bg-slate-900 border-slate-700/50" style="transform: translate(-50%, -50%); opacity: 0; max-width: 380px;">
+                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="News 1" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 w-full p-6 z-10 transition-transform duration-300 transform group-hover:-translate-y-2">
+                        <span class="bg-yellow-500/20 text-yellow-400 border border-yellow-500/30 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-3 inline-block">Event</span>
+                        <h3 class="text-white text-xl md:text-2xl font-black mb-2 leading-tight">Turnamen Mobile Legends Season 12</h3>
+                        <p class="text-slate-300 text-sm line-clamp-2">Bersiaplah untuk pertempuran epik! Ikuti turnamen terbesar dengan prize pool ratusan juta.</p>
                     </div>
-                    <h3 class="text-white text-lg md:text-xl font-bold mb-2 leading-tight">Turnamen Mobile Legends Season 12 Segera Dimulai</h3>
-                    <p class="text-slate-400 text-xs md:text-sm line-clamp-2 md:line-clamp-3">Ikuti turnamen terbesar tahun ini dengan total hadiah ratusan juta rupiah. Daftarkan tim kamu sekarang juga dan jadilah juara!</p>
+                    <!-- Click overlay to block interactions when not center -->
+                    <div class="click-overlay absolute inset-0 z-20 cursor-pointer hidden"></div>
                 </div>
-                <!-- The JS targets .click-overlay to enable/disable clicks on non-center cards -->
-                <div class="click-overlay absolute inset-0 z-50 hidden bg-transparent"></div>
+
+                <!-- Item 2 -->
+                <div class="news-3d-item absolute top-1/2 left-1/2 w-10/12 md:w-5/12 lg:w-4/12 h-80 md:h-96 rounded-3xl overflow-hidden shadow-2xl group cursor-pointer border-2 bg-slate-900 border-slate-700/50" style="transform: translate(-50%, -50%); opacity: 0; max-width: 380px;">
+                    <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="News 2" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 w-full p-6 z-10 transition-transform duration-300 transform group-hover:-translate-y-2">
+                        <span class="bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-3 inline-block">Update</span>
+                        <h3 class="text-white text-xl md:text-2xl font-black mb-2 leading-tight">Patch Notes Valorant</h3>
+                        <p class="text-slate-300 text-sm line-clamp-2">Penyesuaian agent dan perilisan map baru untuk pengalaman bermain lebih baik.</p>
+                    </div>
+                    <div class="click-overlay absolute inset-0 z-20 cursor-pointer hidden"></div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="news-3d-item absolute top-1/2 left-1/2 w-10/12 md:w-5/12 lg:w-4/12 h-80 md:h-96 rounded-3xl overflow-hidden shadow-2xl group cursor-pointer border-2 bg-slate-900 border-slate-700/50" style="transform: translate(-50%, -50%); opacity: 0; max-width: 380px;">
+                    <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="News 3" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 w-full p-6 z-10 transition-transform duration-300 transform group-hover:-translate-y-2">
+                        <span class="bg-blue-500/20 text-blue-400 border border-blue-500/30 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-3 inline-block">Promo</span>
+                        <h3 class="text-white text-xl md:text-2xl font-black mb-2 leading-tight">Diskon Spesial 50%</h3>
+                        <p class="text-slate-300 text-sm line-clamp-2">Dapatkan diskon untuk semua kategori game khusus pengguna baru.</p>
+                    </div>
+                    <div class="click-overlay absolute inset-0 z-20 cursor-pointer hidden"></div>
+                </div>
+                
+                <!-- Item 4 (Hidden normally, used for infinite wrapping) -->
+                <div class="news-3d-item absolute top-1/2 left-1/2 w-10/12 md:w-5/12 lg:w-4/12 h-80 md:h-96 rounded-3xl overflow-hidden shadow-2xl group cursor-pointer border-2 bg-slate-900 border-slate-700/50 tracking-tight" style="transform: translate(-50%, -50%); opacity: 0; max-width: 380px;">
+                    <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="News 4" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 w-full p-6 z-10 transition-transform duration-300 transform group-hover:-translate-y-2">
+                        <span class="bg-purple-500/20 text-purple-400 border border-purple-500/30 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-3 inline-block">Maintenance</span>
+                        <h3 class="text-white text-xl md:text-2xl font-black mb-2 leading-tight">Jadwal Maintenance Server</h3>
+                        <p class="text-slate-300 text-sm line-clamp-2">Peningkatan performa server dan keamanan transaksi mingguan.</p>
+                    </div>
+                    <div class="click-overlay absolute inset-0 z-20 cursor-pointer hidden"></div>
+                </div>
+
             </div>
 
-            <!-- 2 -->
-            <div class="news-carousel-item absolute top-1/2 w-[85%] sm:w-[50%] md:w-[45%] lg:w-[40%] h-[300px] md:h-[400px] rounded-3xl overflow-hidden shadow-[0_0_30px_rgba(0,0,0,0.5)] transition-all duration-500 cursor-pointer bg-slate-900 border border-slate-700/50" onclick="goToSlide(1)">
-                <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="News 2" class="w-full h-full object-cover">
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/60 to-transparent"></div>
-                <div class="absolute bottom-0 left-0 p-6 md:p-8 w-full">
-                    <div class="flex items-center gap-3 mb-3">
-                        <span class="bg-emerald-500 text-white text-[10px] md:text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Update</span>
-                        <span class="text-slate-300 text-xs">10 Mar 2026</span>
-                    </div>
-                    <h3 class="text-white text-lg md:text-xl font-bold mb-2 leading-tight">Patch Notes Terbaru Valorant - Agent Baru</h3>
-                    <p class="text-slate-400 text-xs md:text-sm line-clamp-2 md:line-clamp-3">Penyesuaian agent, perilisan map baru, dan perbaikan bug untuk pengalaman bermain yang jauh lebih baik dan kompetitif.</p>
-                </div>
-                <div class="click-overlay absolute inset-0 z-50 hidden bg-transparent"></div>
-            </div>
-
-            <!-- 3 -->
-            <div class="news-carousel-item absolute top-1/2 w-[85%] sm:w-[50%] md:w-[45%] lg:w-[40%] h-[300px] md:h-[400px] rounded-3xl overflow-hidden shadow-[0_0_30px_rgba(0,0,0,0.5)] transition-all duration-500 cursor-pointer bg-slate-900 border border-slate-700/50" onclick="goToSlide(2)">
-                <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="News 3" class="w-full h-full object-cover">
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/60 to-transparent"></div>
-                <div class="absolute bottom-0 left-0 p-6 md:p-8 w-full">
-                    <div class="flex items-center gap-3 mb-3">
-                        <span class="bg-blue-500 text-white text-[10px] md:text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Promo</span>
-                        <span class="text-slate-300 text-xs">08 Mar 2026</span>
-                    </div>
-                    <h3 class="text-white text-lg md:text-xl font-bold mb-2 leading-tight">Diskon Spesial Top Up 50% Khusus Pengguna Baru</h3>
-                    <p class="text-slate-400 text-xs md:text-sm line-clamp-2 md:line-clamp-3">Dapatkan diskon 50% untuk semua kategori game khusus pengguna baru selama periode promo berlangsung. Jangan sampai ketinggalan!</p>
-                </div>
-                <div class="click-overlay absolute inset-0 z-50 hidden bg-transparent"></div>
-            </div>
-            
-            <!-- 4 -->
-            <div class="news-carousel-item absolute top-1/2 w-[85%] sm:w-[50%] md:w-[45%] lg:w-[40%] h-[300px] md:h-[400px] rounded-3xl overflow-hidden shadow-[0_0_30px_rgba(0,0,0,0.5)] transition-all duration-500 cursor-pointer bg-slate-900 border border-slate-700/50" onclick="goToSlide(3)">
-                <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="News 4" class="w-full h-full object-cover">
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/60 to-transparent"></div>
-                <div class="absolute bottom-0 left-0 p-6 md:p-8 w-full">
-                    <div class="flex items-center gap-3 mb-3">
-                        <span class="bg-purple-500 text-white text-[10px] md:text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Maintenance</span>
-                        <span class="text-slate-300 text-xs">05 Mar 2026</span>
-                    </div>
-                    <h3 class="text-white text-lg md:text-xl font-bold mb-2 leading-tight">Jadwal Maintenance Server LanggananKu Mingguan</h3>
-                    <p class="text-slate-400 text-xs md:text-sm line-clamp-2 md:line-clamp-3">Peningkatan performa server dan keamanan transaksi. Layanan akan terganggu sementara waktu pada pukul 02:00 - 04:00 WIB.</p>
-                </div>
-                <div class="click-overlay absolute inset-0 z-50 hidden bg-transparent"></div>
-            </div>
-
-            <!-- Controls -->
-            <div class="absolute inset-0 flex justify-between items-center px-4 md:px-8 z-40 pointer-events-none">
-                <button id="newsPrevBtn" class="pointer-events-auto bg-slate-900/80 hover:bg-yellow-500 text-slate-300 hover:text-slate-900 w-10 md:w-12 h-10 md:h-12 rounded-full flex items-center justify-center transition-all duration-300 border border-slate-700/50 hover:border-transparent backdrop-blur-md shadow-lg group">
-                    <i class="fas fa-arrow-left group-hover:-translate-x-1 transition-transform"></i>
-                </button>
-                <button id="newsNextBtn" class="pointer-events-auto bg-slate-900/80 hover:bg-yellow-500 text-slate-300 hover:text-slate-900 w-10 md:w-12 h-10 md:h-12 rounded-full flex items-center justify-center transition-all duration-300 border border-slate-700/50 hover:border-transparent backdrop-blur-md shadow-lg group">
-                    <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
-                </button>
-            </div>
+            <!-- Arrow Buttons -->
+            <button id="carousel3dPrevBtn" class="absolute left-2 md:left-8 z-40 bg-slate-900/80 backdrop-blur w-12 h-12 rounded-full border border-slate-700 text-white flex justify-center items-center hover:bg-yellow-500 hover:text-slate-900 transition-colors shadow-lg">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <button id="carousel3dNextBtn" class="absolute right-2 md:right-8 z-40 bg-slate-900/80 backdrop-blur w-12 h-12 rounded-full border border-slate-700 text-white flex justify-center items-center hover:bg-yellow-500 hover:text-slate-900 transition-colors shadow-lg">
+                <i class="fas fa-arrow-right"></i>
+            </button>
         </div>
     </div>
 </section>
 
 
 <!-- FAQ -->
-<section class="py-20 bg-slate-950 mb-12">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl font-bold text-white mb-2">Ribuan Pelangan  Percaya Pada Kami, Inilah Alasannya</h2>
-            <p class="text-slate-400 text-sm italic">Kami memiliki elemen-elemen pilihan, Anda memilih elemen dan mendapatkan uang untuk elemen tersebut.</p>
-            <div class="flex justify-center gap-2 mt-4 text-slate-600 text-2xl">
-                <i class="fas fa-arrow-circle-left hover:text-yellow-500 cursor-pointer transition-colors"></i>
-                <i class="fas fa-arrow-circle-right hover:text-yellow-500 cursor-pointer transition-colors"></i>
-            </div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            @for ($i = 1; $i <= 4; $i++)
-            <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl relative shadow-lg hover:border-yellow-500/50 transition-colors">
-                <i class="fas fa-quote-left text-4xl text-slate-800/50 absolute top-4 left-4"></i>
-                <div class="relative z-10 flex flex-col items-center h-full">
-                    <p class="text-slate-300 text-sm italic mb-8 text-center leading-relaxed h-20">
-                        "Fast delivery and very secure! I got my account details within minutes. Outstanding service as always."
-                    </p>
-                    <div class="flex justify-center text-yellow-500 text-xs mb-6">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <div class="flex flex-col items-center mt-auto">
-                        <img src="https://via.placeholder.com/50?text=U{{$i}}" class="w-12 h-12 rounded-full mb-3 border-2 border-slate-700">
-                        <h4 class="text-white font-bold text-sm">Customer_{{ $i }}</h4>
-                        <span class="text-slate-500 text-xs">Verified Buyer</span>
-                    </div>
-                </div>
-            </div>
-            @endfor
-        </div>
-    </div>
-</section>
+ 
 
 @endsection
 
 @push('scripts')
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-        // News Carousel Logic
-        const newsItems = document.querySelectorAll('.news-carousel-item');
-        if (newsItems.length > 0) {
-            const totalItems = newsItems.length;
-            let currentIndex = 1; // Start with the second item in the middle
+
+        // 3D Carousel Logic
+        const items = document.querySelectorAll('.news-3d-item');
+        const prevBtn = document.getElementById('carousel3dPrevBtn');
+        const nextBtn = document.getElementById('carousel3dNextBtn');
+        
+        if (items.length > 0) {
+            const totalItems = items.length;
+            let currentIndex = 0; // Starts at 0
             
-            // Expose globally for onclick html attributes
-            window.goToSlide = function(index) {
-                currentIndex = index;
-                updateNewsCarousel();
-            };
+            const updateCarouselInfo = () => {
+                const isMobile = window.innerWidth < 768; // Adjust distances for mobile
 
-            const nextBtn = document.getElementById('newsNextBtn');
-            const prevBtn = document.getElementById('newsPrevBtn');
-            
-            if (nextBtn) {
-                nextBtn.addEventListener('click', () => {
-                    currentIndex = (currentIndex + 1) % totalItems;
-                    updateNewsCarousel();
-                });
-            }
-
-            if (prevBtn) {
-                prevBtn.addEventListener('click', () => {
-                    currentIndex = (currentIndex - 1 + totalItems) % totalItems;
-                    updateNewsCarousel();
-                });
-            }
-
-            function updateNewsCarousel() {
-                newsItems.forEach((item, i) => {
+                items.forEach((item, i) => {
                     let diff = i - currentIndex;
                     
-                    // Allow wrapping around
+                    // Logic to loop around (infinite carousel effect)
                     if (diff < -Math.floor(totalItems / 2)) diff += totalItems;
                     if (diff > Math.floor(totalItems / 2)) diff -= totalItems;
                     
-                    let left = 50;
-                    let scale = 1;
-                    let zIndex = 10;
-                    let opacity = 1;
-                    let filter = 'brightness(100%)';
-                    
-                    const isMobile = window.innerWidth < 768;
+                    // Default values
+                    let left = 50;   // percentage from left
+                    let scale = 1;   // scale size
+                    let zIndex = 10; // z-indexing
+                    let opacity = 1; // visibility
+                    let brightness = 'brightness(100%)'; // filter
+                    let pointerEvents = 'auto';
+                    let clickOverlayDisplay = 'none';
 
                     if (diff === 0) {
-                        // Current active center item
-                        left = 50; 
-                        scale = 1.15; // Dibuat lebih besar (115% ukuran asli)
-                        zIndex = 30; 
+                        // CENTER ITEM (Active)
+                        left = 50;
+                        scale = isMobile ? 1.05 : 1.15; 
+                        zIndex = 30;
                         opacity = 1;
-                    } else if (diff === -1) {
-                        // Left item
-                        left = isMobile ? 12 : 18; 
-                        scale = 0.8; // Dibuat lebih kecil dari sebelumnya
-                        zIndex = 20; 
-                        opacity = 1; 
-                        filter = 'brightness(50%)';
-                    } else if (diff === 1) {
-                        // Right item
-                        left = isMobile ? 88 : 82; // Dibuat sama dengan jarak ke kiri (100 - 18)
-                        scale = 0.8; // Dibuat sama besar dengan kiri
-                        zIndex = 19; 
-                        opacity = 1; 
-                        filter = 'brightness(50%)';
+                        brightness = 'brightness(100%)';
+                        pointerEvents = 'auto'; // allow clicking inside
+                        item.classList.add('border-yellow-500'); // Highlight border
+                        item.classList.remove('border-slate-700/50');
+                    } else if (diff === -1 || (diff === totalItems - 1)) {
+                        // LEFT ITEM
+                        left = isMobile ? 15 : 22; 
+                        scale = isMobile ? 0.8 : 0.85; 
+                        zIndex = 20;
+                        opacity = 1;
+                        brightness = 'brightness(50%)';
+                        pointerEvents = 'none'; // prevent interacting with inside elements directly
+                        clickOverlayDisplay = 'block'; // intercept clicks to slide instead
+                        item.classList.remove('border-yellow-500');
+                        item.classList.add('border-slate-700/50');
+                    } else if (diff === 1 || (diff === -totalItems + 1)) {
+                        // RIGHT ITEM
+                        left = isMobile ? 85 : 78; 
+                        scale = isMobile ? 0.8 : 0.85;
+                        zIndex = 20;
+                        opacity = 1;
+                        brightness = 'brightness(50%)';
+                        pointerEvents = 'none';
+                        clickOverlayDisplay = 'block';
+                        item.classList.remove('border-yellow-500');
+                        item.classList.add('border-slate-700/50');
                     } else {
-                        // Hidden items
-                        left = diff < 0 ? -20 : 120; 
-                        scale = 0.6; // Lebih kecil lagi
-                        zIndex = 10; 
+                        // HIDDEN ITEMS
+                        left = diff < 0 ? -50 : 150;
+                        scale = 0.5;
+                        zIndex = 10;
                         opacity = 0;
+                        pointerEvents = 'none';
                     }
                     
+                    // Apply styles
                     item.style.left = left + '%';
                     item.style.transform = `translate(-50%, -50%) scale(${scale})`;
                     item.style.zIndex = zIndex;
                     item.style.opacity = opacity;
-                    item.style.filter = filter;
+                    item.style.filter = brightness;
                     
-                    // Show or hide the click overlay so users can interact with the center card fully
-                    const clickOverlay = item.querySelector('.click-overlay');
-                    if (clickOverlay) {
-                        clickOverlay.style.display = diff === 0 ? 'none' : 'block';
+                    // Show click overlay to easily navigate sides
+                    const overlay = item.querySelector('.click-overlay');
+                    if(overlay) {
+                        overlay.style.display = clickOverlayDisplay;
                     }
                 });
-            }
+            };
+
+            const nextSlide = () => {
+                currentIndex = (currentIndex + 1) % totalItems;
+                updateCarouselInfo();
+            };
+
+            const prevSlide = () => {
+                currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+                updateCarouselInfo();
+            };
+
+            if(nextBtn) nextBtn.addEventListener('click', nextSlide);
+            if(prevBtn) prevBtn.addEventListener('click', prevSlide);
+
+            // Allow clicking the side items to bring them to center
+            items.forEach((item, i) => {
+                const overlay = item.querySelector('.click-overlay');
+                if(overlay) {
+                    overlay.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        let diff = i - currentIndex;
+                        if (diff < -Math.floor(totalItems / 2)) diff += totalItems;
+                        if (diff > Math.floor(totalItems / 2)) diff -= totalItems;
+                        
+                        if(diff > 0) nextSlide();
+                        if(diff < 0) prevSlide();
+                    });
+                }
+            });
+
+            // Re-calc on resize for mobile responsiveness
+            window.addEventListener('resize', updateCarouselInfo);
+
+            // Initialize
+            updateCarouselInfo();
             
-            // Initialization
-            updateNewsCarousel();
-            window.addEventListener('resize', updateNewsCarousel);
+            // Auto Play
+            let carouselInterval = setInterval(nextSlide, 4000);
+            const trackArea = document.getElementById('news-3d-track');
+            if(trackArea) {
+                trackArea.addEventListener('mouseenter', () => clearInterval(carouselInterval));
+                trackArea.addEventListener('mouseleave', () => { carouselInterval = setInterval(nextSlide, 4000) });
+            }
         }
 
         // Animated Counters
