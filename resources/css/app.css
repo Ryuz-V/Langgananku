@@ -1,0 +1,20 @@
+@import "https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap";
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Outfit', sans-serif;
+    --color-primary: #8b5cf6;
+    --color-secondary: #ec4899;
+    --color-dark: #0f172a;
+}
+
+@layer base {
+    body {
+        @apply bg-slate-950 text-slate-200 font-sans antialiased;
+    }
+}
