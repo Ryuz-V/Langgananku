@@ -173,94 +173,226 @@
 </section>
 
 <!-- News and Update Section -->
-<section class="py-20 bg-slate-950 relative border-y border-slate-800/50 overflow-hidden">
-    <!-- Decorative background elements -->
-    <div class="absolute top-0 right-0 -translate-y-12 translate-x-1/3 w-96 h-96 bg-yellow-500/10 blur-[100px] rounded-full pointer-events-none"></div>
-    <div class="absolute bottom-0 left-0 translate-y-1/3 -translate-x-1/3 w-96 h-96 bg-blue-500/10 blur-[100px] rounded-full pointer-events-none"></div>
+<section class="py-12 pb-20 mb-32 bg-slate-950 overflow-hidden">
+    <div class="text-center mb-8" style="padding-left: 10px;">
+        <h2 class="text-3xl md:text-4xl font-black text-white uppercase tracking-wide">Berita & Update </h2>
+    </div>
+    <div class="relative w-full">
+        <div class="pointer-events-none absolute left-0 top-0 h-full w-16 md:w-24 z-10" style="background: linear-gradient(to right, rgba(2,6,23,1), transparent);"></div>
+        <div class="pointer-events-none absolute right-0 top-0 h-full w-16 md:w-24 z-10" style="background: linear-gradient(to left, rgba(2,6,23,1), transparent);"></div>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="text-center mb-12 relative" style="transform: translateX(1.2rem);">
-            <h2 class="text-3xl md:text-5xl font-black text-white mb-4 tracking-tight">Berita & Update</h2>
-            <p class="text-slate-400 text-sm md:text-base leading-relaxed max-w-2xl mx-auto">Jangan lewatkan informasi mendalam mengenai patch notes terbaru, event eksklusif, dan promo menarik yang hanya ada di LanggananKu.</p>
+        <div id="news-scroll-track" class="flex gap-4 overflow-x-auto pb-4 px-4" style="scrollbar-width: none; -ms-overflow-style: none; scroll-snap-type: x mandatory;">
+            @php
+                $newsItems = [
+                    [
+                        'title'  => 'Jam Terbaik Top Up Mobile Legends Biar Dapat Harga Lebih Murah',
+                        'date'   => '09-03-2026',
+                        'image'  => 'https://images.unsplash.com/photo-1542751110-97427bbecf20?w=600&q=80',
+                        'tag'    => 'Tips',
+                    ],
+                    [
+                        'title'  => 'Jangan Asal Top Up! Ini 5 Ciri Website ML yang Berbahaya',
+                        'date'   => '08-03-2026',
+                        'image'  => 'https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?w=600&q=80',
+                        'tag'    => 'Keamanan',
+                    ],
+                    [
+                        'title'  => 'Berapa Total Uang yang Dihabiskan Player ML Sampai Mythic Glory? Ini Estimasi…',
+                        'date'   => '07-03-2026',
+                        'image'  => 'https://images.unsplash.com/photo-1511512578047-dfb367046420?w=600&q=80',
+                        'tag'    => 'Info',
+                    ],
+                    [
+                        'title'  => 'Apa Perbedaan Top Up Resmi dan Tidak Resmi di Mobile Legends?',
+                        'date'   => '05-03-2026',
+                        'image'  => 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&q=80',
+                        'tag'    => 'Edukasi',
+                    ],
+                    [
+                        'title'  => 'Update Patch Mobile Legends Maret 2026: Hero Baru dan Perubahan Meta',
+                        'date'   => '03-03-2026',
+                        'image'  => 'https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?w=600&q=80',
+                        'tag'    => 'Update',
+                    ],
+                    [
+                        'title'  => 'Promo Top Up Diamond Free Fire Spesial Ramadan, Hemat Hingga 30%!',
+                        'date'   => '01-03-2026',
+                        'image'  => 'https://images.unsplash.com/photo-1616588589676-62b3bd4ff6d2?w=600&q=80',
+                        'tag'    => 'Promo',
+                    ],
+                ];
+            @endphp
+
+            @foreach($newsItems as $news)
+            <a href="#" class="news-card flex-shrink-0 rounded-2xl overflow-hidden group"
+               style="width: 280px; min-width: 280px; scroll-snap-align: start; background: #1a2a6c; background: linear-gradient(160deg, #1a2a6c 0%, #0d1b4b 100%); text-decoration: none;">
+                <!-- Thumbnail -->
+                <div class="relative w-full overflow-hidden" style="height: 170px;">
+                    <img src="{{ $news['image'] }}" alt="{{ $news['title'] }}"
+                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <!-- Tag badge -->
+                    <span class="absolute top-3 left-3 text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-full"
+                          style="background: rgba(255,255,255,0.15); color: #fff; backdrop-filter: blur(4px);">
+                        {{ $news['tag'] }}
+                    </span>
+                </div>
+                <!-- Content -->
+                <div class="p-4">
+                    <h3 class="text-white font-bold text-sm leading-snug mb-3 line-clamp-3 group-hover:text-yellow-400 transition-colors" style="min-height: 56px;">
+                        {{ $news['title'] }}
+                    </h3>
+                    <p class="text-slate-400 text-xs font-medium">{{ $news['date'] }}</p>
+                </div>
+            </a>
+            @endforeach
         </div>
+    </div>
 
-        <!-- 3D Carousel Container -->
-        <div class="relative w-full max-w-6xl mx-auto flex items-center justify-center overflow-hidden" style="height: 480px; min-height: 60vh;">
-            
-            <!-- Items Track -->
-            <div id="news-3d-track" class="w-full h-full relative">
-                
-                <!-- Item 1 -->
-                <div class="news-3d-item absolute top-1/2 left-1/2 w-10/12 md:w-5/12 lg:w-4/12 h-80 md:h-96 rounded-3xl overflow-hidden shadow-2xl group cursor-pointer border-2 bg-slate-900 border-slate-700/50" style="transform: translate(-50%, -50%); opacity: 0; max-width: 380px;">
-                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="News 1" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent"></div>
-                    <div class="absolute bottom-0 left-0 w-full p-6 z-10 transition-transform duration-300 transform group-hover:-translate-y-2">
-                        <span class="bg-yellow-500/20 text-yellow-400 border border-yellow-500/30 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-3 inline-block">Event</span>
-                        <h3 class="text-white text-xl md:text-2xl font-black mb-2 leading-tight">Turnamen Mobile Legends Season 12</h3>
-                        <p class="text-slate-300 text-sm line-clamp-2">Bersiaplah untuk pertempuran epik! Ikuti turnamen terbesar dengan prize pool ratusan juta.</p>
-                    </div>
-                    <!-- Click overlay to block interactions when not center -->
-                    <div class="click-overlay absolute inset-0 z-20 cursor-pointer hidden"></div>
-                </div>
-
-                <!-- Item 2 -->
-                <div class="news-3d-item absolute top-1/2 left-1/2 w-10/12 md:w-5/12 lg:w-4/12 h-80 md:h-96 rounded-3xl overflow-hidden shadow-2xl group cursor-pointer border-2 bg-slate-900 border-slate-700/50" style="transform: translate(-50%, -50%); opacity: 0; max-width: 380px;">
-                    <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="News 2" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent"></div>
-                    <div class="absolute bottom-0 left-0 w-full p-6 z-10 transition-transform duration-300 transform group-hover:-translate-y-2">
-                        <span class="bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-3 inline-block">Update</span>
-                        <h3 class="text-white text-xl md:text-2xl font-black mb-2 leading-tight">Patch Notes Valorant</h3>
-                        <p class="text-slate-300 text-sm line-clamp-2">Penyesuaian agent dan perilisan map baru untuk pengalaman bermain lebih baik.</p>
-                    </div>
-                    <div class="click-overlay absolute inset-0 z-20 cursor-pointer hidden"></div>
-                </div>
-
-                <!-- Item 3 -->
-                <div class="news-3d-item absolute top-1/2 left-1/2 w-10/12 md:w-5/12 lg:w-4/12 h-80 md:h-96 rounded-3xl overflow-hidden shadow-2xl group cursor-pointer border-2 bg-slate-900 border-slate-700/50" style="transform: translate(-50%, -50%); opacity: 0; max-width: 380px;">
-                    <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="News 3" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent"></div>
-                    <div class="absolute bottom-0 left-0 w-full p-6 z-10 transition-transform duration-300 transform group-hover:-translate-y-2">
-                        <span class="bg-blue-500/20 text-blue-400 border border-blue-500/30 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-3 inline-block">Promo</span>
-                        <h3 class="text-white text-xl md:text-2xl font-black mb-2 leading-tight">Diskon Spesial 50%</h3>
-                        <p class="text-slate-300 text-sm line-clamp-2">Dapatkan diskon untuk semua kategori game khusus pengguna baru.</p>
-                    </div>
-                    <div class="click-overlay absolute inset-0 z-20 cursor-pointer hidden"></div>
-                </div>
-                
-                <!-- Item 4 (Hidden normally, used for infinite wrapping) -->
-                <div class="news-3d-item absolute top-1/2 left-1/2 w-10/12 md:w-5/12 lg:w-4/12 h-80 md:h-96 rounded-3xl overflow-hidden shadow-2xl group cursor-pointer border-2 bg-slate-900 border-slate-700/50 tracking-tight" style="transform: translate(-50%, -50%); opacity: 0; max-width: 380px;">
-                    <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="News 4" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent"></div>
-                    <div class="absolute bottom-0 left-0 w-full p-6 z-10 transition-transform duration-300 transform group-hover:-translate-y-2">
-                        <span class="bg-purple-500/20 text-purple-400 border border-purple-500/30 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-3 inline-block">Maintenance</span>
-                        <h3 class="text-white text-xl md:text-2xl font-black mb-2 leading-tight">Jadwal Maintenance Server</h3>
-                        <p class="text-slate-300 text-sm line-clamp-2">Peningkatan performa server dan keamanan transaksi mingguan.</p>
-                    </div>
-                    <div class="click-overlay absolute inset-0 z-20 cursor-pointer hidden"></div>
-                </div>
-
-            </div>
-
-            <!-- Arrow Buttons -->
-            <button id="carousel3dPrevBtn" class="absolute left-2 md:left-8 z-40 bg-slate-900/80 backdrop-blur w-12 h-12 rounded-full border border-slate-700 text-white flex justify-center items-center hover:bg-yellow-500 hover:text-slate-900 transition-colors shadow-lg">
-                <i class="fas fa-arrow-left"></i>
-            </button>
-            <button id="carousel3dNextBtn" class="absolute right-2 md:right-8 z-40 bg-slate-900/80 backdrop-blur w-12 h-12 rounded-full border border-slate-700 text-white flex justify-center items-center hover:bg-yellow-500 hover:text-slate-900 transition-colors shadow-lg">
-                <i class="fas fa-arrow-right"></i>
-            </button>
-        </div>
+    <!-- Navigation buttons -->
+    <div class="flex justify-center gap-3 px-4" style="margin-top: 48px;">
+        <button id="newsScrollPrev"
+                class="w-12 h-12 rounded-full flex items-center justify-center text-white transition-all duration-300"
+                style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); box-shadow: 0 0 0 rgba(234,179,8,0);"
+                onmouseenter="this.style.background='rgba(234,179,8,0.9)'; this.style.color='#0f172a'; this.style.transform='scale(1.15)'; this.style.boxShadow='0 0 20px rgba(234,179,8,0.5)'; this.style.border='1px solid rgba(234,179,8,0.8)';"
+                onmouseleave="this.style.background='rgba(255,255,255,0.08)'; this.style.color='white'; this.style.transform='scale(1)'; this.style.boxShadow='0 0 0 rgba(234,179,8,0)'; this.style.border='1px solid rgba(255,255,255,0.2)';">
+            <i class="fas fa-chevron-left text-sm"></i>
+        </button>
+        <button id="newsScrollNext"
+                class="w-12 h-12 rounded-full flex items-center justify-center text-white transition-all duration-300"
+                style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); box-shadow: 0 0 0 rgba(234,179,8,0);"
+                onmouseenter="this.style.background='rgba(234,179,8,0.9)'; this.style.color='#0f172a'; this.style.transform='scale(1.15)'; this.style.boxShadow='0 0 20px rgba(234,179,8,0.5)'; this.style.border='1px solid rgba(234,179,8,0.8)';"
+                onmouseleave="this.style.background='rgba(255,255,255,0.08)'; this.style.color='white'; this.style.transform='scale(1)'; this.style.boxShadow='0 0 0 rgba(234,179,8,0)'; this.style.border='1px solid rgba(255,255,255,0.2)';">
+            <i class="fas fa-chevron-right text-sm"></i>
+        </button>
     </div>
 </section>
 
-
 <!-- FAQ -->
- 
+<section class="py-16 bg-slate-950 mb-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 ">
+        <div class="text-center mb-10">
+            <h2 class="text-3xl md:text-4xl font-black text-white uppercase tracking-wide">Pertanyaan Umum</h2>
+        </div>
+        <!-- FAQ Items -->
+        <div class="flex flex-col gap-3" id="faq-list">
+
+            @php
+                $faqs = [
+                    [
+                        'q' => 'Apa itu LanggananKu?',
+                        'a' => 'LanggananKu adalah platform top up game dan berlangganan akun premium digital terpercaya. Kami menyediakan layanan top up diamond, koin, dan berbagai mata uang dalam game dengan harga terbaik dan proses cepat.',
+                    ],
+                    [
+                        'q' => 'Apa saja layanan yang tersedia di LanggananKu?',
+                        'a' => 'Kami menyediakan layanan top up game populer seperti Mobile Legends, Free Fire, PUBG, Genshin Impact, dan banyak lagi. Selain itu, kami juga menyediakan akun premium seperti Netflix, Spotify, YouTube Premium, Disney+, dan lainnya.',
+                    ],
+                    [
+                        'q' => 'Apakah transaksi di LanggananKu aman?',
+                        'a' => 'Ya, semua transaksi di LanggananKu dijamin aman. Kami menggunakan sistem enkripsi terkini dan tidak pernah meminta data sensitif seperti password akun game Anda. Setiap transaksi diproses langsung melalui sistem resmi.',
+                    ],
+                    [
+                        'q' => 'Berapa lama proses top up selesai?',
+                        'a' => 'Proses top up biasanya selesai dalam hitungan detik hingga beberapa menit setelah pembayaran dikonfirmasi. Untuk akun premium, pengiriman dilakukan maksimal 1x24 jam setelah pembayaran berhasil.',
+                    ],
+                    [
+                        'q' => 'Bagaimana cara melakukan pembelian di LanggananKu?',
+                        'a' => 'Caranya mudah: pilih produk yang ingin dibeli, masukkan ID game atau informasi akun yang diperlukan, pilih metode pembayaran, selesaikan pembayaran, dan item akan langsung masuk ke akun Anda secara otomatis.',
+                    ],
+                    [
+                        'q' => 'Metode pembayaran apa saja yang diterima?',
+                        'a' => 'Kami menerima berbagai metode pembayaran seperti transfer bank (BCA, Mandiri, BNI, BRI), dompet digital (GoPay, OVO, DANA, ShopeePay), minimarket (Alfamart, Indomaret), dan kartu kredit/debit.',
+                    ],
+                    [
+                        'q' => 'Apakah ada garansi untuk setiap pembelian?',
+                        'a' => 'Ya, kami memberikan garansi untuk setiap transaksi. Jika item tidak masuk dalam waktu yang dijanjikan, kami akan memproses ulang atau memberikan refund penuh sesuai kebijakan kami.',
+                    ],
+                    [
+                        'q' => 'Kapan customer service LanggananKu aktif?',
+                        'a' => 'Customer service kami aktif 24 jam sehari, 7 hari seminggu termasuk hari libur. Anda dapat menghubungi kami melalui live chat di website, WhatsApp, atau email support@langgananku.com.',
+                    ],
+                ];
+            @endphp
+
+            @foreach($faqs as $index => $faq)
+            <div class="faq-item rounded-xl overflow-hidden cursor-pointer"
+                 style="background: linear-gradient(135deg, #1565C0 0%, #1976D2 50%, #2196F3 100%); box-shadow: 0 4px 15px rgba(25, 118, 210, 0.25);"
+                 onclick="toggleFaq({{ $index }})">
+                <!-- Header -->
+                <div class="flex items-center justify-between" style="padding: 24px 28px; min-height: 80px;">
+                    <div class="flex items-center gap-3">
+                        <span class="faq-icon-{{ $index }} text-white font-bold text-lg leading-none transition-transform duration-300">+</span>
+                        <span class="text-white font-semibold text-lg md:text-xl">{{ $faq['q'] }}</span>
+                    </div>
+                    <i class="faq-chevron-{{ $index }} fas fa-chevron-down text-white text-sm transition-transform duration-300"></i>
+                </div>
+                <!-- Body -->
+                <div id="faq-body-{{ $index }}" class="overflow-hidden transition-all duration-300" style="max-height: 0;">
+                    <div class="px-5 pb-4 pt-0">
+                        <div class="border-t border-white/20 pt-3">
+                            <p class="text-blue-100 text-lg leading-relaxed">{{ $faq['a'] }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+
+        </div>
+    </div>
+</section>
 
 @endsection
 
 @push('scripts')
 <script>
+    // FAQ Accordion
+    let openFaqIndex = null;
+
+    function toggleFaq(index) {
+        const body     = document.getElementById('faq-body-' + index);
+        const icon     = document.querySelector('.faq-icon-' + index);
+        const chevron  = document.querySelector('.faq-chevron-' + index);
+
+        const isOpen = body.style.maxHeight !== '0px' && body.style.maxHeight !== '';
+
+        // Close previously opened FAQ
+        if (openFaqIndex !== null && openFaqIndex !== index) {
+            const prevBody    = document.getElementById('faq-body-' + openFaqIndex);
+            const prevIcon    = document.querySelector('.faq-icon-' + openFaqIndex);
+            const prevChevron = document.querySelector('.faq-chevron-' + openFaqIndex);
+            if (prevBody)    prevBody.style.maxHeight = '0px';
+            if (prevIcon)    prevIcon.textContent = '+';
+            if (prevChevron) prevChevron.style.transform = 'rotate(0deg)';
+        }
+
+        if (isOpen) {
+            body.style.maxHeight    = '0px';
+            icon.textContent        = '+';
+            chevron.style.transform = 'rotate(0deg)';
+            openFaqIndex = null;
+        } else {
+            body.style.maxHeight    = body.scrollHeight + 'px';
+            icon.textContent        = '×';
+            chevron.style.transform = 'rotate(180deg)';
+            openFaqIndex = index;
+        }
+    }
+
     document.addEventListener('DOMContentLoaded', () => {
+
+        // News horizontal scroll buttons
+        const newsTrack = document.getElementById('news-scroll-track');
+        const newsNext  = document.getElementById('newsScrollNext');
+        const newsPrev  = document.getElementById('newsScrollPrev');
+        const scrollAmount = 300;
+
+        if (newsTrack) {
+            if (newsNext) newsNext.addEventListener('click', () => {
+                newsTrack.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            });
+            if (newsPrev) newsPrev.addEventListener('click', () => {
+                newsTrack.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            });
+        }
 
         // 3D Carousel Logic
         const items = document.querySelectorAll('.news-3d-item');
@@ -302,7 +434,7 @@
                         item.classList.remove('border-slate-700/50');
                     } else if (diff === -1 || (diff === totalItems - 1)) {
                         // LEFT ITEM
-                        left = isMobile ? 15 : 22; 
+                        left = isMobile ? 2 : 5; 
                         scale = isMobile ? 0.8 : 0.85; 
                         zIndex = 20;
                         opacity = 1;
@@ -313,7 +445,7 @@
                         item.classList.add('border-slate-700/50');
                     } else if (diff === 1 || (diff === -totalItems + 1)) {
                         // RIGHT ITEM
-                        left = isMobile ? 85 : 78; 
+                        left = isMobile ? 98 : 95; 
                         scale = isMobile ? 0.8 : 0.85;
                         zIndex = 20;
                         opacity = 1;
@@ -333,7 +465,7 @@
                     
                     // Apply styles
                     item.style.left = left + '%';
-                    item.style.transform = `translate(-50%, -50%) scale(${scale})`;
+                    item.style.transform = `translate(-50%, 10%) scale(${scale})`;
                     item.style.zIndex = zIndex;
                     item.style.opacity = opacity;
                     item.style.filter = brightness;
